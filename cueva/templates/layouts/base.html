@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock %} Cueva Boutique</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-800 text-white">
+
+    <nav class="flex   justify-between items-center p-4">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'category_list'  %}">Categories</a></li>
+        </ul>
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
